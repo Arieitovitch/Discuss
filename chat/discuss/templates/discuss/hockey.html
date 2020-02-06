@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discuss</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'discuss/main.css' %}"> 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<div class="nav">
+    <ul>
+       <a class="active" href="hockey.html"><li>Hockey</li></a>
+        <a href="football.html"><li>Football</li></a>
+        <a href="basketball.html"><li>Basketball</li></a>
+        <a href="baseball.html"><li>Baseball</li></a>
+    </ul>
+</div>
+<h1 class="header">Discuss <span class="topic">Hockey</span></h1>
+<body>  
+    <div class="overlay">
+        <div class="text">   
+        {% for comment in data  %}
+            <h4 class="text">{{ comment.comment_text }}</h4>
+            {% endfor %}
+        </div>    
+        <div class="comment">  
+        <form method="POST" class="form_style">
+        {% csrf_token %}
+        <input type="text" formethod="post" class="coment" placeholder="comment" name='comment'/>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

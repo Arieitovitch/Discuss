@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discuss</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'discuss/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<div class="nav">
+    <ul>
+       <a href="hockey.html"><li>Hockey</li></a>
+        <a href="football.html"><li>Football</li></a>
+        <a class="active" href="basketball.html"><li>Basketball</li></a>
+        <a href="baseball.html"><li>Baseball</li></a>
+    </ul>
+</div>
+<h1 class="header">Discuss <span class="topic">Basketball</span></h1>
+<body>
+    <div class="flex"><div class="comment-box">
+    <div class="overlay"><div class="comment"> 
+            <input type="text" class="coment" placeholder="comment"/>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
